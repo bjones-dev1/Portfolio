@@ -1,0 +1,178 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #18181b;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4) 1px,
+      transparent 1px
+    ),
+    /* Horizontal lines */
+      linear-gradient(to right, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: 11% -1px;
+}
+
+#cards {
+  margin-left: 10%;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  border-bottom: solid white 2px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 40px;
+  background-color: black;
+  margin: 0 0.5rem;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+header nav ul li a:hover {
+  background-color: #515151;
+}
+
+section {
+  padding: 2rem;
+  margin-top: 50px;
+  margin-right: 10%;
+  flex-grow: 1;
+  background-color: #999999;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+
+#about {
+  width: 35%;
+  order: 1;
+  margin-right: 10%;
+}
+
+#technologies {
+  width: 35%;
+  order: 2;
+}
+
+#side {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tech-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech {
+  position: relative;
+  margin: 10px;
+  font-size: 40px;
+
+  transition: transform 0.3s;
+}
+
+.tech:hover {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  font-size: 12px;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+
+.tech:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project,
+.education {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.project a:active {
+  color: #5e0bd1;
+}
+
+#contact {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  border-top: solid white 2px;
+}
